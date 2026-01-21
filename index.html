@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<title>Step up Web</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
+
+/* เอฟเฟกต์เลื่อน */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.1s ease;
+}
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* header */
+header {
+  background: #010d2c;
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* เมนู */
+nav {
+  background: #222;
+  padding: 12px;
+  text-align: center;
+}
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  color: #6fa8ff;
+}
+
+/* เส้นคาดสีกรม */
+.navy-bar {
+  width: 100%;
+  height: 15px;
+  background: #010d2c;
+  margin:6px 0;
+}
+
+/* เนื้อหา */
+.container {
+  padding: 20px;
+  text-align: center;
+}
+
+/* ตาราง */
+table {
+  background: white;
+  margin: 30px auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* footer */
+footer {
+  background: #fdfdfd;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+</style>
+<style>
+body {
+  background: linear-gradient(270deg, #010d2c,  #010d2c);
+  background-size: 600% 600%;
+  animation: gradientMove 20s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 10%; }
+  100% { background-position: 0% 30%; }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="reveal">
+  <h1>Welcom</h1>
+  <p>Step up</p>
+</header>
+
+<nav class="reveal">
+  <a href="index.html"><span style="color: #ffffff;">หน้าแรก</span></a>
+  <a href="lota2.html"><span style="color: #ffffff;">เกี่ยวกับเรา</span></a>
+  <a href="lota3.html"><span style="color: #ffffff;">ติดตามข่าวสารจาก พรรค</span></a>  
+</nav>
+
+<div class="navy-bar reveal"></div>
+
+<div class="container reveal welcome-box">
+  <h2><span style="color: rgba(235, 234, 234, 0.992);">หน้าเเรก ของพวกเรา</span></h2>
+  <p> <span style="color: rgba(235, 234, 234, 0.992);">ยินดีต้อนรับเข้าสู่เว็บไซต์ของพรรค</span> <span style="color: yellow;">Step Up</span> </p>
+  <div class="line"></div>
+  <span class="tag"><span style="color: rgba(235, 234, 234, 0.992);">STEP UP • Student Council</span></span>
+</div>
+
+
+<table width="100%" cellpadding="20" class="reveal">
+  <tr>
+    <td width="40%" align="center">
+      <img src="images/Step.jpg" width="100%" style="border-radius:10px;">
+    </td>
+
+    <td width="60%" valign="top">
+      <h2>เกี่ยวกับ STEP UP</h2>
+      <h4>สภานักเรียน SK SC Student Council</h4>
+      <p>
+        STEP UP นักเรียนก้าวใหม่มันแปลว่าก้าวขึ้นมา เราจะก้าวขึ้นมาเพื่อพัฒนา ก้าวขึ้นมาเพื่อลอง ก้าวขึ้นมาเพื่อพิสูจน์ ก้าวขึ้นมาเพื่อทำทุกอย่างให้สำเร็จ
+      </p>
+      <br>
+      <p>
+        เราจะก้าวขึ้นมาเป็นผู้นำที่ดีของโรงเรียนเพื่อสร้างสรรค์สิ่งใหม่ๆ ก้าวขึ้นมาเพื่อเปลี่ยนเเปลงสิ่งที่ไม่ดีให้ดีขึ้น
+      </p>
+      <br>
+      <p>ช่องทางการติดตามข่าวสาร</p>
+      <a href="https://www.instagram.com/step_.up3/?hl=id" target="_blank">
+        instagram : STEP UP SK SC Student Council
+        <br><br><br>
+        <a href="https://www.tiktok.com/@sk.step.up03" target="_blank">
+          tiktok : @sk.step.up03
+        </a>
+      </a>
+    </td>
+  </tr>
+</table>
+
+<div style="
+  width:100%;
+  height:100px;
+  background:#FFFFFF;
+"></div>
+
+<script>
+const reveals = document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll", () => {
+  reveals.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 650) {
+      el.classList.add("show");
+    }
+  });
+});
+</script>
+<!-- เส้นคาดล่างสุด + ข้อความ -->
+<div style="
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:70px;
+  background:#FFFFFF;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+">
+  <span style="
+    color:#123b63;
+    font-weight:bold;
+    font-size:16px;
+  ">
+    STEP UP · Student Council
+  </span>
+</div>
+<section style="background:#ffffff; padding:60px 20px;">
+  <div style="max-width:1000px; margin:auto; display:flex; gap:30px; flex-wrap:wrap;">
+
+    <div style="flex:1; min-width:250px;">
+      <video width="500" controls>
+  <source src="images/intro.mp4" type="video/mp4">
+</video>
+
+    </div>
+
+    <div style="flex:1; min-width:250px;">
+      <h2>คริปเเนะนำตัว สมาชิก พรรค STEP UP</h2>
+
+      <p>
+        สวัสดีค่ะ/ครับ เราคือพรรค STEP UP 
+        พวกเราคือนักเรียนที่มีความมุ่งมั่น 
+        ต้องการพัฒนาสิ่งต่างๆในโรงเรียนให้ดีขึ้น 
+        เพื่อสร้างสรรค์สิ่งใหม่ๆให้กับโรงเรียนของเรา
+      </p>
+
+      <p>
+        STEP UP พร้อมรับฟังทุกเสียงของนักเรียน  
+        และนำไปสู่การเปลี่ยนแปลงที่จับต้องได้
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+
+</body>
+</html>
